@@ -1,0 +1,16 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+td.a {
+  color: red;
+}
+tr {
+  vertical-align: bottom;
+  list-style-image: url("https://assets.justinmind.com/wp-content/uploads/2020/05/dropdown-menu-design.png");
+}
