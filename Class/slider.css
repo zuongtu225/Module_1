@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-size: cover;
+  background-image: url("https://images.fpt.shop/unsafe/filters:quality(5)/fptshop.com.vn/uploads/images/2015/Tin-Tuc/Khang/062017/danh-gia-imac-2017-1.png");
+}
+.silder {
+  border-radius: 15px;
+  margin-top: 5%;
+  margin-left: 25%;
+  position: relative;
+  width: 50%;
+  height: 500px;
+  overflow: hidden;
+  object-fit: cover;
+}
+#slider1,
+#slider2,
+#slider3,
+#slider4,
+#slider5 {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  object-fit: cover;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.bx1 {
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+}
+.bx2 {
+  right: 1px;
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+}
+.bx3 {
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+}
+.bx4 {
+  right: 1px;
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+}
+.bx5 {
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+}
+.bx6 {
+  right: 1px;
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+}
+.bx7 {
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+}
+.bx8 {
+  right: 1px;
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+}
+.bx9 {
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+  left: 1px;
+}
+.bx10 {
+  right: 1px;
+  top: 40%;
+  color: rgb(255, 255, 255);
+  font-size: 101px;
+  cursor: pointer;
+  position: absolute;
+}
+/* ---------- */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .div {
+        background-color: green;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        animation-name: move;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes move {
+        0% {
+          top: 0px;
+          left: 0px;
+          background-color: #ef1414;
+        }
+        10% {
+          top: 0px;
+          left: 440px;
+          background-color: #060606;
+        }
+        40% {
+          top: 220px;
+          left: 440px;
+          background-color: #09f134;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+          background-color: #ff0000;
+        }
+      }
+      span{
+margin: 110px;
+} /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    @media only screen and (min-width: 600px) {
+        /* For tablets: */
+        .col-s-1 {width: 8.33%;}
+        .col-s-2 {width: 16.66%;}
+        .col-s-3 {width: 25%;}
+        .col-s-4 {width: 33.33%;}
+        .col-s-5 {width: 41.66%;}
+        .col-s-6 {width: 50%;}
+        .col-s-7 {width: 58.33%;}
+        .col-s-8 {width: 66.66%;}
+        .col-s-9 {width: 75%;}
+        .col-s-10 {width: 83.33%;}
+        .col-s-11 {width: 91.66%;}
+        .col-s-12 {width: 100%;}
+    }
+    @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+    }
+ </style>
+  </head>
+  <body><div class="row">
+    <div class="col-3 col-s-3">...</div>
+    <div class="col-6 col-s-9">...</div>
+    <div class="col-3 col-s-12">...</div>
+ </div>
+    <span>d<span/><span>d<span/><span>d<span/><span>d<span/>
+    <div class="div"><u>sdsds dsfdddddds dsffffffffffffff -0190 20-s</u></div>
+  </body>
+</html>
