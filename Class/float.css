@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 50px;
+  background-image: url("https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Instagram-Icon-Cotton-Candy-Gradient.jpg");
+}
+header {
+  position: fixed;
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  padding: 5px 50px;
+  width: 100%;
+  height: 50px;
+  background-color: #ede9e9;
+  align-items: center;
+}
+header img {
+  border-radius: 15px;
+  margin-left: 5%;
+  width: 40px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+}
+.sidebar-left {
+  margin: 70px 10px;
+  width: 20%;
+  height: 900px;
+  background-color: #0d0d0d;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  float: left;
+}
+h2:first-child {
+  color: rgb(7, 234, 255);
+}
+.sidebar-left ul {
+  margin-top: 50%;
+}
+.sidebar-right ul {
+  margin-top: 50%;
+}
+
+.content {
+  margin: 70px 0;
+  float: left;
+  width: 57%;
+}
+.content img {
+  width: 100%;
+}
+.sidebar-right {
+  margin: 100px 10px;
+  width: 20%;
+  height: 500px;
+  background-color: #0d0d0d;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  float: right;
+}

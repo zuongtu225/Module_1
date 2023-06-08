@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  padding: 10px;
+}
+.row {
+  background-color: #080808;
+  height: 50px;
+  width: 100%;
+  color: rgb(18, 160, 2);
+}
+
+@media (max-width: 767px) {
+  h1::after {
+    content: "- MOBILE";
+  }
+  .row {
+    color: #080808;
+
+    background-color: #a0dde0;
+  }
+  .row::after {
+    content: "MOBILE";
+    background-color: #ea1d1d;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1::after {
+    content: "-TABLET";
+  }
+  .row {
+    color: black;
+    background-color: #e0cc19;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    color: #050505;
+  }
+  .row {
+    background-color: #8df38d;
+  }
+}
+fieldset {
+  height: 300px;
+  font-weight: bold;
+  font-style: initial;
+  border: 2px solid rgb(0, 226, 211);
+}
+legend {
+  font-style: unset;
+  color: rgb(247, 244, 244);
+  padding: 5px 20px;
+  background-color: #0c0c0c;
+}
+.main {
+  width: 1000px;
+}
+.head {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  background-color: #9a9a9a;
+}
+.head-link {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #9a9a9a;
+}
+.left {
+  background-color: #925a5a;
+  width: 205px;
+  min-height: 300px;
+  float: left;
+}
+.content {
+  background-color: #c0a1a1;
+  width: 600px;
+  min-height: 300px;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.right {
+  background-color: #65eae3;
+  width: 234px;
+  min-height: 300px;
+  border: 1px solid #cdcdcd;
+  float: right;
+  margin-bottom: 5px;
+}
+.footer {
+  font-size: 30px;
+  padding: 10px 0px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background-color: #a5a5ea;
+  clear: both;
+  align-items: center;
+  text-align: center;
+}
+#menu-doc {
+  float: left;
+}
+#menu-doc li {
+  list-style: none;
+  position: relative;
+  width: 200px;
+  height: 30px;
+  padding: 0 20px;
+  background-color: black;
+  line-height: 30px;
+  cursor: pointer;
+}
+#menu-doc li a {
+  text-decoration: none;
+  color: white;
+}
+#menu-doc li:hover {
+  background-color: red;
+}
+#menu-doc ul ul {
+  position: absolute;
+  top: 0;
+  left: 140px;
+  visibility: hidden;
+}
+#menu-doc ul li:hover ul {
+  visibility: visible;
+  z-index: 999;
+}
+
+#menu-ngang {
+}
