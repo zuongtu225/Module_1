@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        color: aliceblue;
+        background-size: cover;
+        background-image: url("https://s1.1zoom.me/b5050/229/330635-alexfas01_1920x1080.jpg");
+      }
+      button {
+        background-color: rgb(13, 215, 13);
+        color: aliceblue;
+        width: 100px;
+        height: 30px;
+        margin-left: 50%;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+      }
+      h2 {
+        margin-left: 30%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bai1</legend>
+      <h3>Tính Điểm Trung Bình Toán Lý Hóa</h3>
+      <h2 id="result"></h2>
+      <button onclick="average()">Result</button>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>Bai2</legend>
+      <h3>Đô la Mỹ $ sang Việt Nam Đồng vnd.</h3>
+      <h2 id="curren"></h2>
+      <button onclick="currency()">Result</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bai3</legend>
+      <h3>Mô tả thuật toán tìm giá trị lớn nhất trong 3 số</h3>
+      <h2 id="printMax"></h2>
+      <button onclick="largest()">Result</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bai4</legend>
+      <h1>Ứng dụng chuyển đổi tiền tệ 📲</h1>
+      <h3>Bài 2 - Chuyển đổi tiền tệ</h3>
+      <table>
+        <tr>
+          <th>Amount</th>
+          <th>From Currency</th>
+          <th>To Currency</th>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="Nhập số tiền muốn chuyển đổi"
+            />
+          </td>
+          <td>
+            <select name="currency" id="currency" onchange="onChange()">
+              <option value="VND" selected>VNĐ</option>
+              <option value="USD">USD</option>
+            </select>
+          </td>
+          <td><input type="text" disabled id="to-currency" value="USD" /></td>
+          <td><button onclick="convertCurrency()">Convert</button></td>
+        </tr>
+      </table>
+      <br />
+      <input
+        type="text"
+        disabled
+        placeholder="Nhận kết quả sau khi convert"
+        id="result"
+      />
+    </section>
+      <button onclick="currencyAPP()">Result</button>
+    </fieldset>
+    <fieldset>
+      <legend>Bai5</legend>
+      <h1>Tìm giá trị lớn nhất trong dãy số n📲</h1>
+      <h2 id="printMax"></h2>
+      <button onclick="nLagest()">Result</button>
+    </fieldset>
+    <script src="index.js"></script>
+  </body>
+</html>

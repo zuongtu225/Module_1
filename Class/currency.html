@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="curency.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><input type="number" name="" id="money" /></td>
+        <td>
+          <select name="" id="">
+            <option id="ndt" value="">Đồng Nhân Dân Tệ</option>
+            <option id="vnd" value="">Đồng Việt Nam</option>
+          </select>
+        </td>
+        <td>
+          <select name="" id="">
+            <option id="vnd" value="">Đồng Việt Nam</option>
+            <option id="ndt" value="">Đồng Nhân Dân Tệ</option>
+          </select>
+        </td>
+        <td></td>
+        <td><button onclick="currency()">Convert</button></td>
+      </tr>
+      <tr>
+        <td colspan="4"><h1 class="result"></h1></td>
+      </tr>
+    </table>
+    <script src="currency.js"></script>
+  </body>
+</html>

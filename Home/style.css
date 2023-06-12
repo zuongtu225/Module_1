@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+fieldset {
+  width: 100%;
+  height: 450px;
+}
+legend {
+  background-color: rgb(14, 221, 28);
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.btn {
+  border-radius: 6px;
+  padding: 20px 50px;
+  background-color: rgb(6, 192, 6);
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+}
+#word {
+  float: right;
+  display: flex;
+  color: rgb(15, 246, 30);
+}
+.btn1 {
+  border-radius: 6px;
+  padding: 10px;
+  background-color: rgb(6, 192, 6);
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  float: right;
+  margin-right: 10%;
+  font-weight: bold;
+}
+.status {
+  width: 50%;
+}
+.status img {
+  width: 20%;
+  height: 20%;
+}
+.btn2 {
+  border-radius: 6px;
+  padding: 20px;
+  background-color: rgb(6, 192, 6);
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: bold;
+  left: 211px;
+  position: absolute;
+  bottom: -50%;
+}
+.btn3 {
+  border-radius: 6px;
+  padding: 20px;
+  background-color: rgb(244, 33, 33);
+  border: none;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: bold;
+  left: 25%;
+  bottom: -50%;
+  position: absolute;
+}
