@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-size: cover;
+        background-position: center;
+        background-image: url("https://wallpaperaccess.com/full/7314.jpg");
+        color: aliceblue;
+        background-color: #050505;
+      }
+      button {
+        margin-left: 5%;
+        margin-top: 5%;
+        border: none;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(41, 146, 0);
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.952);
+        cursor: pointer;
+      }
+      input {
+        padding: 10px;
+        font-size: 30px;
+        width: 300px;
+        height: 30px;
+      }
+      h1 {
+        font-size: 40px;
+        margin-top: 70px;
+        margin-left: 22%;
+        width: max-content;
+        background: rgb(201, 106, 214);
+        background: radial-gradient(
+          circle,
+          rgba(201, 106, 214, 1) 12%,
+          rgba(40, 196, 222, 1) 38%,
+          rgba(196, 167, 203, 1) 85%
+        );
+        color: rgb(255, 255, 255);
+      }
+    </style>
+    <title>ĐỒNG HỒ</title>
+  </head>
+  <body>
+    <button onclick="clock()">CHẠY ĐỒNG HỒ</button>
+    <h1 id="result1"></h1>
+    <br />
+    <br /><br />
+    <input
+      type="number"
+      id="number"
+      placeholder="Nhập thời gian cần đếm ngược"
+    />
+    <button onclick="clock2()">ĐẾM NGƯỢC THỜI GIAN</button>
+    <h1 id="result2"></h1>
+    <script src="clock.js"></script>
+  </body>
+</html>
