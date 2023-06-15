@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        color: rgb(253, 248, 248);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("https://cdn.wallpapersafari.com/84/69/bAxDYu.jpg");
+      }
+      h1 {
+        color: rgb(254, 11, 11);
+        position: absolute;
+        top: 5%;
+        left: 28%;
+        background-color: black;
+        padding: 10px 20px;
+      }
+      h2 {
+        color: rgb(254, 11, 11);
+        position: absolute;
+        top: 25%;
+        left: 33%;
+        background-color: #fff;
+      }
+      button {
+        padding: 20px 20px;
+        color: rgb(249, 242, 242);
+        background: rgb(201, 106, 214);
+        background: radial-gradient(
+          circle,
+          rgba(201, 106, 214, 1) 12%,
+          rgba(40, 196, 222, 1) 38%,
+          rgba(196, 167, 203, 1) 85%
+        );
+        border: 5px solid rgb(0, 4, 4);
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 35%;
+        margin-top: 20%;
+        cursor: pointer;
+      }
+    </style>
+    <title>BMI</title>
+  </head>
+  <body>
+    <h1>Switch-Case Tính chỉ số cân nặng của cơ thể</h1>
+    <h2 id="text"></h2>
+    <button onclick="bmi()">Nhập vào 1 số xem bạn có trúng số không</button>
+    <script src="bmi-switch.js"></script>
+  </body>
+</html>
