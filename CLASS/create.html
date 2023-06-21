@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ul"></ul>
+    <input type="text" id="text" />
+    <button onclick="handleAdd()">ADD</button>
+    <script>
+      const array = [];
+      function handleAdd() {
+        let text = document.querySelector("#text").value;
+        text.value = "";
+        array.unshift(text); //thêm vào đầu mảng
+        console.log(array);
+        render();
+      }
+      function render() {
+        let content = "";
+        let render = document.querySelector("#ul");
+        for (let i = 0; i < array.length; i++) {
+          content += `<li>
+            ${array[i]}
+            </li>`;
+        }
+        render.innerHTML = content;
+        //xóa dữ liệu
+      }
+    </script>
+  </body>
+</html>

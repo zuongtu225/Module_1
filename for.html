@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #e8f4f5;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+      legend {
+        font-size: 20px;
+        font-family: system-ui;
+        background-color: #03abf3;
+        border-radius: 10px;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>BÀI - FOR IN</legend>
+      <pre>
+ const arr = [
+        [1, 2],
+        [3, 5],
+        [3, 5],
+        [3, 5],
+      ];
+      ĐỘ DÀI CỦA MỖI OBJECT LÀ NHƯ NHAU VÀ CẤU TRÚC LENGTH PHẢI = NHAU  
+      
+      </pre>
+      <hr />
+      <h1>const arr = ["a", "b", "c"];</h1>
+      <br />
+      <h1>for (var variable in object)</h1>
+      <br />
+      <h1>
+        + "variable" là biến để lưu giữ tên của thuộc tính đang được lặp qua
+        trong mỗi vòng lặp. <br />
+        + "object" là đối tượng chứa các thuộc tính muốn lặp qua.
+      </h1>
+      <button onclick="for_in()">for_in</button>
+      <h1 id="text"></h1>
+    </fieldset>
+    <br />
+    <br />
+    <fieldset>
+      <legend>BÀI - FOR OF</legend>
+      <pre>
+        // for of
+        const iterable = [10, 20, 30];
+  
+        for (let value of iterable) {
+          value += 1;
+          console.log("for-of", value);
+        }
+        // 11
+        // 21
+        // 31
+      </pre>
+      <button onclick="for_in()">for_in</button>
+      <h1 id="text"></h1>
+    </fieldset>
+    <script>
+      function for_in() {
+        let print = document.getElementById("text");
+        const arr = ["a", "b", "c"];
+        let text = "";
+        for (let a in arr) {
+          text += arr[a] + " ";
+        }
+        console.log(text);
+        print.innerHTML = text;
+      }
+
+      // for of
+      const iterable = [10, 20, 30];
+
+      for (let value of iterable) {
+        value += 1;
+        console.log("for-of", value);
+      }
+      // 11
+      // 21
+      // 31
+    </script>
+  </body>
+</html>

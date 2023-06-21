@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #c2bcbc;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bai-1</legend>
+      <h2>pop()thức loại bỏ phần tử cuối cùng khỏi một mảng</h2>
+      <button onclick="handlePop()">array.pop()</button>
+      <!-- --------------- -->
+    </fieldset>
+
+    <script>
+      const array = ["kold", "trump", "elon musk"];
+      function handlePop() {
+        array.pop();
+        console.log(array);
+      }
+    </script>
+  </body>
+</html>

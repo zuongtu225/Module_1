@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #c2bcbc;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Bai-1</legend>
+
+      <h1>
+        Bài 1: Viết một chương trình JavaScript để nối tất cả các phần tử trong
+        một mảng chuỗi lại với nhau
+      </h1>
+      <br />
+      <h1>myColor = ["Lion", "Tiger", "Wolf", "Kangaroo"];</h1>
+      <br />
+      <br />
+      <button onclick="handleFor()">FOR</button>
+      <h1 id="print1"></h1>
+      <!-- --------------- -->
+      <button onclick="handleToString()">ToString()</button>
+      <h1 id="print2"></h1>
+      <!-- --------------- -->
+      <button onclick="handleJoin()">handleJoin()</button>
+      <h1 id="print3"></h1>
+      <!-- --------------- -->
+    </fieldset>
+    <!-- ----------- -->
+    <fieldset>
+      <legend>BAI-2</legend>
+      <pre>
+        <b>     
+        Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (_) giữa 2 số chẵn.
+
+        Ví dụ nếu bạn nhập vào 245468 thì kết quả của chương trình sẽ là 2-454-6-8.</b></pre>
+
+      <button onclick="handle_ex2()">handle_ex2()</button>
+      <h1 id="text1"></h1>
+      <button onclick="handle_ex22()">
+        handle_ex2() --- DÙNG SPLIT("") CHUYỂN ĐỔI CHUỖI THÀNH MẢNG KÝ TỰ
+      </button>
+      <h1 id="text2"></h1>
+    </fieldset>
+    <!-- ---------------- -->
+    <fieldset>
+      <legend>Bai-3</legend>
+
+      <h1>
+        Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ
+        thường trong chuỗi vừa nhập sang thành dạng chữ hoa.
+      </h1>
+      <br />
+      <br />
+      <br />
+      <button onclick="handleText()">FOR</button>
+      <h1 id="print4"></h1>
+      <br />
+      <br />
+      <button onclick="handleText2()">FOR</button>
+      <h1 id="print5"></h1>
+      <br />
+      <br />
+      <button onclick="handleText3()">FOR</button>
+      <h1 id="print6"></h1>
+    </fieldset>
+    <script>
+      // -----------
+      function handleFor() {
+        let print = document.querySelector("#print1");
+        const myarr = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+        let string = "";
+        for (let i = 0; i < myarr.length; i++) {
+          if (i == myarr.length - 1) {
+            string += myarr[i];
+          } else {
+            string += myarr[i] + " ,";
+          }
+        }
+        print.innerHTML = string;
+      }
+      //   ---------
+      function handleToString() {
+        let print = document.querySelector("#print2");
+        const myarr = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+        let newArray = myarr.toString();
+        console.log(newArray);
+        print.innerHTML = newArray;
+      }
+      //   ---------
+      function handleJoin() {
+        let print = document.querySelector("#print3");
+        const myarr = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+        let newArray = myarr.join("-");
+        console.log(newArray);
+        print.innerHTML = newArray;
+      }
+
+      //   -----------CÁCH 1---------
+      function handle_ex2() {
+        const numStr = prompt("Nhap vo ");
+        let print = document.querySelector("#text1");
+        let result = "";
+        for (let i = 0; i < numStr.length; i++) {
+          if (numStr[i] % 2 == 0 && numStr[i + 1] % 2 == 0) {
+            result += numStr[i] + "-";
+          } else {
+            result += numStr[i];
+          }
+        }
+        console.log(1, result);
+        print.innerHTML = result;
+      }
+      //----------CÁCH 2----DÙNG Split-----
+      function handle_ex22() {
+        const numStr = prompt("Nhap vo ");
+        let print = document.querySelector("#text2");
+        let arr = numStr.split(""); // CHUYỂN ĐỔI CHUỖI THÀNH MẢNG KÝ TỰ
+        let result = "";
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 == 0 && arr[i + 1] % 2 == 0) {
+            result += arr[i] + "-";
+          } else {
+            result += arr[i];
+          }
+        }
+        console.log(2, result);
+        print.innerHTML = result;
+      }
+
+      //-BÀI 4------CÁCH 1------------
+      function handleText2() {
+        let print = document.querySelector("#print5");
+        let word = prompt("Nhập một số ");
+        let result = " ";
+        for (let i = 0; i < word.length; i++) {
+          if (word[i] == word[i].toUpperCase()) {
+            result += word[i].toLowerCase();
+          } else {
+            result += word[i].toUpperCase();
+          }
+        }
+        print.innerHTML = result;
+      }
+      // -------CÁCH 2----------------
+      function handleText() {
+        let print = document.querySelector("#print4");
+        let word = prompt("Nhập một số ");
+        const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let string = "";
+        let isDulicate = false;
+        for (let k = 0; k < word.length; k++) {
+          for (let i = 0; i < upper.length; i++) {
+            if (word[k] === upper[i]) {
+              string += word[k].toLowerCase();
+              isDulicate = true;
+              break; //DỪNG LẶP CÁC CHỮ CÒN LẠI
+            }
+            if (!isDulicate) {
+              string += word[k].toUpperCase();
+              break;
+            }
+          }
+          print.innerHTML = string;
+        }
+        console.log(1, string);
+      }
+      // ------CÁCH 3--------- --
+      function handleText3() {}
+    </script>
+  </body>
+</html>

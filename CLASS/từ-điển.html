@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #e3e3e3;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <fieldset>
+    <legend>Từ điển</legend>
+
+    <h1>Từ điển</h1>
+    <br />
+
+    <br />
+    <input type="text" id="info" />
+    <br />
+    <button onclick="dictionary()">FOR</button>
+    <h1 id="print"></h1>
+    <!-- --------------- -->
+  </fieldset>
+  <body>
+    <script>
+      function dictionary() {
+        let word = document.querySelector("#info").value;
+        let print = document.querySelector("#print");
+        const english = ["hello", "good", "nice", "damage"];
+        const vietnam = ["xin chao", "tốt lắm", "tuyệt vời", "cay"];
+        let result = "";
+        for (let i = 0; i < english.length; i++) {
+          if (word.toLowerCase() == english[i]) {
+            result = vietnam[i];
+            break;
+          }
+        }
+        console.log(result);
+        print.innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #c2bcbc;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Faking Textarea on Typing</h1>
+    <textarea
+      name=""
+      id="textarea"
+      cols="30"
+      rows="10"
+      oninput="showText()"
+    ></textarea>
+    <script>
+      let count = 0;
+
+      function showText() {
+        let result = "";
+        const text = "TÔI LÀ MỘT GENTLEMENT";
+        let print = document.getElementById("textarea"); // Xóa ký tự "#" khỏi getElementById
+
+        if (count === text.length) {
+          count = 0;
+          result = ""; // Đặt lại giá trị của biến result thành chuỗi rỗng khi count đạt đến độ dài của text
+        } else {
+          count++;
+        }
+
+        for (let i = 0; i < count; i++) {
+          // Lặp cho đến giá trị 'count' thay vì độ dài đầy đủ của chuỗi text
+          result += text[i];
+        }
+
+        print.value = result;
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>
