@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      BÀI 3: Viết chương trình nhập vào số nguyên N. Nếu giá trị nhập vào > 0,
+      yêu cầu người dùng nhập tiếp cho đến khi nào nhập vào số 0 thì kết thúc.
+      Hiển thị kết quả phân loại các số vừa nhập thuộc các nhóm số nguyên tố, số
+      hoàn hảo, số chẵn, số lẻ
+    </h2>
+    <button onclick="ex()">RUN</button>
+    <br />
+    <h1 id="text"></h1>
+    <h1 id="text1"></h1>
+    <h1 id="text2"></h1>
+    <h1 id="text3"></h1>
+    <h1 id="text4"></h1>
+    <script>
+      function ex() {
+        let even = "Số chẵn ";
+        let odd = "Số lẻ ";
+        let prime = "Số nguyên tố ";
+        let perfectNum = "Số hoàn hảo ";
+        let n;
+        let text = document.getElementById("text");
+        let text1 = document.getElementById("text1");
+        let text2 = document.getElementById("text2");
+        let text3 = document.getElementById("text3");
+        do {
+          n = +prompt("Nhập vào số: ");
+          if (n > 0) {
+            // ------chẵn lẻ--------
+            if (n % 2 == 0) {
+              //kiểm tra chẵn lẻ
+              even += " " + n;
+            } else {
+              odd += " " + n;
+            }
+            // ---------số nguyên tố-----
+            let isPrime = true;
+            for (i = 2; i < n; i++) {
+              if (n % i == 0) {
+                isPrime = false;
+              }
+            }
+            if (isPrime) {
+              prime += ": " + n;
+            }
+          }
+          //   --------số pefect------- -------
+          let sum = 0;
+          for (i = 1; i <= n / 2; i++) {
+            // pefect Number không thể chia hết cho chính nó
+            if (n % i == 0) {
+              sum = sum + i;
+            }
+          }
+          if (n == sum) {
+            perfectNum += ": " + n;
+          }
+        } while (n > 0);
+        console.log(even);
+        text.innerHTML = even;
+        text1.innerHTML = odd;
+        text2.innerHTML = prime;
+        text3.innerHTML = perfectNum;
+      }
+    </script>
+  </body>
+</html>

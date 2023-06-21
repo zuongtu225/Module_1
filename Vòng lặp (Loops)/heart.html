@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="love()">HEART</button>
+    <div id="love"></div>
+    <script>
+      function love() {
+        // B1: Nhập được chiều dài và chiều rộng:
+        const resultElement = document.querySelector("#love");
+        const height = 5;
+        const width = 6;
+        // B2: Dùng vòng lặp For để xác định nội dung hiển thị:
+
+        let resultContent = " ";
+        for (let row = 0; row <= height; row++) {
+          // Tạo 1 dòng
+          resultContent += "<div>";
+          for (let col = 0; col <= width; col++) {
+            // Tạo nội dung cho col
+            if ((row == 0 && col % 3 !== 0) || (row == 1 && col % 3 === 0)) {
+              resultContent += "*";
+            } else if (row + col == 8 || row - col == 2) {
+              resultContent += "*";
+            } else {
+              resultContent += "&nbsp;&nbsp;&nbsp;";
+            }
+          }
+          resultContent += "</div>";
+        }
+        resultElement.innerHTML = resultContent;
+      }
+    </script>
+  </body>
+</html>

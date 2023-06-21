@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      button {
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        padding: 10px 620px;
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ex()">DO WHILE</button>
+
+    <!-- ------ -->
+    <br />
+    <button onclick="ex1()">VÒNG LẶP DO WHILE</button>
+    <div id="text"></div>
+    <script>
+      function ex() {
+        let a;
+        do {
+          a = +prompt("ash");
+          console.log(a);
+        } while (a > 0); //NẾU WHILE ĐÚNG THÌ CHẠY DO
+      }
+      // ----------------
+      function ex1() {
+        let answer;
+        do {
+          answer = confirm("Em có đồng ý làm người iu anh ko?");
+          if (answer) {
+            alert("Đồng ý ạ");
+          } else {
+            alert("ĐÉO ");
+          }
+        } while (answer);
+      }
+    </script>
+  </body>
+</html>

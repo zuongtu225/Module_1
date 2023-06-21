@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="text"></div>
+    <button onclick="ractange()">PRINT</button>
+    <script>
+      function ractange() {
+        //B1. NHẬP ĐƯỢC CHIỀU DÀI, CHIỀU RỘNG
+        let height = +prompt("Nhập vào chiều Cao");
+        let width = +prompt("Nhập vào chiều rộng");
+        let text = document.querySelector("#text");
+        //B2. DÙNG VÒNG LẶP FOR ĐỂ XÁC ĐỊNH NỘI DUNG HIỂN THỊ
+        let resultContent = " ";
+        for (let row = 0; row < height; row++) {
+          // Tạo 1 dòng
+          resultContent += "<div>";
+          for (let col = 0; col < width; col++) {
+            // Tạo nội dung cho col
+            if (row == 0 || row == height - 1 || col == 0 || col == width - 1) {
+              resultContent += "*";
+            } else {
+              resultContent += "&nbsp;&nbsp;";
+            }
+          }
+          resultContent += "</div>";
+        }
+        text.innerHTML = resultContent;
+      }
+    </script>
+  </body>
+</html>

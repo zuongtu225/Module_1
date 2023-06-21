@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      BÀI 9: Viết chương trình nhập vào một câu bất kì, in ra câu đảo ngược của
+      nó. Ví dụ: “Hello world” → “dlrow olleH”
+    </h1>
+    <button onclick="reverse()">REVERSE() ĐẢO NGƯỢC</button>
+    <h2 id="print"></h2>
+    <br />
+    <br />
+    <button onclick="reverse2()">REVERSE() ĐẢO NGƯỢC CÁCH 2</button>
+
+    <h2 id="print2"></h2>
+    <script>
+      function reverse() {
+        let print = document.getElementById("print");
+        let text = prompt("Nhập vào đoạn chữ");
+        const array = text.split(""); // CHUYỂN ĐỔI CHUỖI THÀNH MẢNG KÝ TỰ
+        const reversedArray = array.reverse(); //ĐẢO NGƯỢC MẢNG
+        const reverseString = reversedArray.join(""); // Chuyển đổi mảng ký tự thành chuỗi
+        console.log(reverseString);
+        print.innerHTML = reverseString;
+      }
+      // ------CÁCH 2---------
+      function reverse2() {
+        let print = document.querySelector("#print2");
+        // --------------------------------
+        let text = prompt("Nhập vào đoạn chữ");
+        const array = text.split("");
+        let newArray = "";
+        for (let i = array.length - 1; i >= 0; i--) {
+          newArray += array[i];
+        }
+        print.innerHTML = newArray;
+      }
+    </script>
+  </body>
+</html>

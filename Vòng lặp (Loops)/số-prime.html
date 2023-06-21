@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="isPrime()">PRIME</button>
+    <script>
+      function isPrime() {
+        let value = +prompt("Nhập một số ");
+        for (let k = 2; k <= value; k++) {
+          for (let j = 2; j <= k; j++) {
+            //j < k sẽ ko lặp khi nào j = k mới lặp vòng for 2
+            if (k % j == 0) {
+              console.log("Khong phai so nguyen to", k, j);
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

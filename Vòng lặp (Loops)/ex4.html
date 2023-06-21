@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        color: rgb(253, 248, 248);
+        font-size: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("https://picstatio.com/large/02d180/starry-night-hut-dark.jpg");
+      }
+      h1 {
+        color: rgb(252, 252, 252);
+      }
+      button {
+        padding: 10px;
+        color: aliceblue;
+        background-color: rgb(11, 244, 11);
+        border-radius: 5px;
+        font-weight: bold;
+        margin-left: 40%;
+        cursor: pointer;
+        border: none;
+      }
+      fieldset {
+        margin: 10px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>BÀI 4: Tính tổng 30 số đầu tiên chia hết cho 5</legend>
+
+      <h2 id="text1"></h2>
+      <button onclick="ex1()">Tính toán</button>
+    </fieldset>
+    <script>
+      function ex1() {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; count <= 30; i++) {
+          if (i % 5 == 0) {
+            sum += i; //i là những số chia hết cho 5
+            count++; //count là số đếm thôi
+          }
+        }
+        console.log(sum);
+        // -----Cách 2--while----
+        while (count <= 30) {
+          if (i % 5 == 0) {
+            sum += i;
+            count++;
+          }
+          i++;
+        }
+      }
+    </script>
+  </body>
+</html>

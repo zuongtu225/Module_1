@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fibonaci()">FIBONACI LEONARDO DAVINCII</button>
+    <h1 id="text"></h1>
+    <script>
+      function fibonaci() {
+        let text = document.getElementById("text");
+        let pre = 0;
+        let current = 1;
+        let next = 0;
+        let count = 0;
+        let sum = 0;
+        while (count < 20) {
+          sum += pre;
+          pre = current;
+          current = next;
+          count++;
+        }
+        console.log(sum);
+        text.textContent = sum;
+      }
+    </script>
+  </body>
+</html>

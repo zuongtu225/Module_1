@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="tamgiac()">TRIANGLE</button>
+    <div class="ractangle"></div>
+    <script>
+      function tamgiac() {
+        let height = +prompt("Chiều cao của tam giác: ");
+        for (let col = 1; col <= height; col++) {
+          let result = "";
+          for (let space = 1; space <= height - col; space++) {
+            result += " ";
+          }
+          for (let row = 1; row < col * 2; row++) {
+            result += "*";
+          }
+          console.log(result);
+        }
+      }
+    </script>
+  </body>
+</html>
