@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div id="square"></div>
+    <div id="rectangle"></div>
+    <input type="number" id="info" placeholder="number" />
+    <input type="text" id="color" placeholder="color" />
+    <button onclick="convert()">Convert</button>
+    <script>
+      function convert() {
+        let num = document.querySelector("#info").value;
+        let color = document.querySelector("#color").value;
+        circle(num, color);
+        square(num, color);
+        rectangle(num, color);
+      }
+
+      function circle(num, color) {
+        document.getElementById("circle").style.width = num + "px";
+        document.getElementById("circle").style.height = num + "px";
+        document.getElementById("circle").style.borderRadius = " 50%";
+        document.getElementById("circle").style.border = "1px solid black";
+        document.getElementById("circle").style.background = color;
+      }
+      function square(num, color) {
+        document.getElementById("square").style.width = num + "px";
+        document.getElementById("square").style.height = num + "px";
+        document.getElementById("square").style.border = "1px solid black";
+        document.getElementById("square").style.background = color;
+      }
+      function rectangle(num, color) {
+        document.getElementById("rectangle").style.width = num * 3 + "px";
+        document.getElementById("rectangle").style.height = num + "px";
+        document.getElementById("rectangle").style.border = "1px solid black";
+        document.getElementById("rectangle").style.background = color;
+      }
+    </script>
+  </body>
+</html>

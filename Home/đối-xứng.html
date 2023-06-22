@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container input {
+        border-radius: 5px;
+        width: 344px;
+        height: 30px;
+        border: 2px solid rgb(1, 182, 248);
+      }
+      .container button {
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 9px 20px;
+        font-weight: bold;
+        color: white;
+        background-color: rgb(4, 217, 4);
+        border: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <input type="text" name="" id="palindrome" />
+      <button onclick="handlePalindrome()">Check</button>
+    </div>
+    <script>
+      function handlePalindrome() {
+        let palindrome = document.querySelector("#palindrome").value;
+        if (palindrome.length < 2) {
+          alert("Nhập ít quá ");
+        }
+        let first = 0;
+        let last = palindrome.length - 1;
+        if (palindrome.length > 2) {
+          while (last > first) {
+            //DÙNG WHILE LẶP ĐẾN ĐIỀU KIỆN SAI THÌ DỪNG LẠI
+            if (palindrome[first] != palindrome[last]) {
+              //palindrome[first] :chỉ số first là vị trí phần tử đầu tiên
+              //palindrome[last] :chỉ số first là vị trí phần tử cuối cùng
+              alert("It is not a Palindrome");
+              return false;
+            }
+            first++; //MỖI LẦN TIẾN LÊN 1 CHỈ SỐ
+            last--; //MỖI LẦN LÙI LẠI 1 CHỈ SỐ
+          }
+          alert("Supprise You get Right!");
+          return true;
+        }
+        // --------CÁCH 1 -----------
+        //   const number = prompt("Enter a number");
+        //   const newNumber = Array.from(number);
+        //   let symm = true;
+
+        //   for (let i = 0; i < newNumber.length; i++) {
+        //     if (newNumber[i] != newNumber[newNumber.length - i - 1]) {
+        //       symm = false;
+        //       break;
+        //     }
+        //   }
+
+        //   if (symm) console.log("so doi xung");
+        //   else console.log("so khong doi xung");
+        // }
+
+        // -------CÁCH 2 BỊ BUG ----------
+        // let len = palindrome.length;
+        // for (let i = 0; i < len / 2; i++) {
+        //   //len / 2 chiều dài mảng = 1 nửa
+        //   if (len < 2) {
+        //     alert("Nhập ít quá ");
+        //   }
+        //   if (palindrome[i] !== palindrome[len - 1 - i]) {
+        //     //palindrome[len - 1 - i] + len - 1 : Là index phần tử cuối mảng và - i là đếm lùi
+        //     //palindrome[i] :đếm từ 0 tới n
+        //     alert("It is not a Palindrome");
+        //     break;
+        //   } else if (len >= 2) {
+        //     if (palindrome[i] == palindrome[len - 1 - i]) {
+        //       alert("Supprise You get Right!");
+        //       break;
+        //     }
+        //   }
+        // }
+      }
+    </script>
+  </body>
+</html>

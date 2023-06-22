@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        color: rgb(5, 5, 5);
+        background-color: #e3d7d7;
+      }
+      h1 {
+        margin-left: 40%;
+        background-color: #fff;
+        max-width: max-content;
+        padding: 25px;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>RETURN</h1>
+    <br />
+    <br /><br />
+    <h2>
+      ĐẶT 1 BIẾN ĐỂ HỨNG VÀ RETURN CÁI BIẾN ĐÓ NẾU KO HỨNG THÌ RETURN KO CÓ Ý
+      NGHĨA
+    </h2>
+    <pre>
+        function isEven(num) {
+
+                if (num % 2 === 0) {
+            
+                    return true;
+            
+                } else {
+            
+                    return false;
+            
+                }
+            
+            }
+            
+            console.log(isEven(4)); // true
+            
+            console.log(isEven(5)); // false
+    </pre>
+    <h3></h3>
+    <h2></h2>
+    <script>
+      let h3 = document.querySelector("h3");
+      let h2 = document.querySelector("h2");
+      function isEven(num) {
+        if (num % 2 === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      h3.textContent = isEven(4);
+      h2.textContent = isEven(9);
+      console.log(isEven(4)); // true
+
+      console.log(isEven(5)); // false
+    </script>
+  </body>
+</html>

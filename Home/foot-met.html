@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #c2bcbc;
+      }
+      button {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin-left: 59px;
+        background-color: hsl(0, 0%, 3%);
+        color: white;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+      h1 {
+        background-color: #fff;
+      }
+      input {
+        width: 1200px;
+        height: 30px;
+      }
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      tr,
+      th {
+        border: 1px solid black;
+      }
+      th:nth-child(3) {
+        padding: 10px 50px;
+      }
+      th,
+      td {
+        padding: 10px 20px;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="valueInput" />
+    <button onclick="feetMeter()">Convert</button>
+    <table id="meet-to-feet">
+      <thead>
+        <tr>
+          <th>Feet</th>
+          <th>Meters</th>
+          <th></th>
+          <th>Meters</th>
+          <th>Feet</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      const array = [];
+      function feetMeter() {
+        const value = document.querySelector("#valueInput").value;
+        const feet = convertToFeet(value);
+        //B4. LƯU KẾT QUẢ
+
+        renderMeetToFoot(array);
+      }
+      function convertToFeet(meter) {
+        const feet = 0.35 * meter;
+        return feet;
+      }
+      function renderMeetToFoot(data) {
+        const idTbody = document.querySelector("#meet-to-feet tbody");
+        let contentTbody = "";
+        for (let element of data) {
+          contentTbody += `
+                  <tr>
+                       <td>${element[0]}</td>
+                       <td>${element[1]}</td>
+                      </tr>
+              `;
+        }
+        idTbody.innerHTML = contentTbody;
+      }
+    </script>
+  </body>
+</html>

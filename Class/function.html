@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //KHAI BÁO 1 FUNCTION
+      // -----CÁCH 1---------
+      const newFunction = function (r) {
+        return 3.14 * r * r;
+      };
+      //   ---CÁCH 2------
+      // DÙNG 1 LẦN DUY NHẤT ---> đóng gói thư viện
+      (function (color) {
+        const body = document.querySelector("body");
+        body.style.background = color;
+      })("grey");
+      //DÙNG ARROW FUNCTION
+      const getData = (data) => {
+        return data;
+      };
+
+      //----CALL BACK function là nhận Function làm ĐỐI SỐ----
+      function x10(a) {
+        return a * 10;
+      }
+      function render(callFn, number) {
+        const x10 = callFn(number);
+        return x10;
+      }
+      const result = render(x10, 9);
+      console.log(result);
+      // ---------------------------------------------------------------------------
+      function sumary(a, b) {
+        let result = a + b;
+        //return --> trả về kết quả function --> BẤT KỲ KIỂU DỮ LIỆU NÀO
+        return result;
+      }
+      sumary(5, 10);
+      //-------agruments--------------------
+      function myFunction() {
+        let a = arguments[0];
+        let b = arguments[1];
+        let str = arguments[2];
+        console.log(a + b, str);
+      }
+      myFunction(4, 2, "hello world");
+      //   ----------
+    </script>
+  </body>
+</html>
