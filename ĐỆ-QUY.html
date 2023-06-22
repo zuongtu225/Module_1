@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre>
+// Hàm đệ quy
+        function recurse() {
+        
+            // Kiểm tra điều kiện
+            // Đúng: Ngừng gọi lại chính nó
+            // Sai: Gọi lại chính nó
+            if(condition) {
+                // Code ngừng gọi lại
+            } else {
+                recurse();
+            }
+        }</pre
+    >
+    <script>
+      function recurse(number) {
+        console.log(number);
+        let nextNumber = number - 1;
+        // console.log(a);
+        if (nextNumber > 0) {
+          recurse(nextNumber);
+        }
+      }
+      recurse(5);
+
+      countDown(5);
+    </script>
+  </body>
+</html>

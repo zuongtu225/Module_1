@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Khởi tạo mảng và đếm số lượng số nguyên lớn hơn hoặc bằng 10
+      function countNumbers() {
+        var arr = [];
+
+        // Nhập vào mảng số nguyên gồm 10 phần tử
+        for (var i = 0; i < 10; i++) {
+          var number = parseInt(prompt("Nhập số nguyên thứ " + (i + 1) + ":"));
+          arr.push(number);
+        }
+
+        var count = 0;
+
+        // Đếm số lượng số nguyên lớn hơn hoặc bằng 10
+        for (var i = 0; i < arr.length; i++) {
+          if (arr[i] >= 10) {
+            count++;
+          }
+        }
+
+        // Hiển thị kết quả
+        console.log("Số lượng số nguyên lớn hơn hoặc bằng 10 là: " + count);
+      }
+
+      // Gọi hàm để thực thi chương trình
+      countNumbers();
+    </script>
+  </body>
+</html>
