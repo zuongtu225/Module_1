@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ứng dụng Quản lý công việc</title>
-    <link rel="stylesheet" href="app.css" />
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Ứng dụng Quản lý công việc</h1>
+    <h1>Đăng ký tài khoản</h1>
 
-    <input id="taskInput" type="text" placeholder="Thêm công việc" />
-    <button id="addButton">Thêm</button>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required />
+      <input type="password" id="password" placeholder="Mật khẩu" required />
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Xác nhận mật khẩu"
+        required
+      />
+      <button type="submit">Đăng ký</button>
+    </form>
 
-    <ul id="taskList"></ul>
+    <script src="script.js">
+      document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("#addButton").click(function () {
-          var task = $("#taskInput").val();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
 
-          if (task !== "") {
-            var listItem = $("<li>").text(task);
-            $("#taskList").append(listItem);
-            $("#taskInput").val("");
-          }
-        });
+            if (password !== confirmPassword) {
+              alert('Mật khẩu không khớp');
+              return;
+            }
 
-        $(document).on("click", "li", function () {
-          $(this).toggleClass("completed");
-        });
+            // Xử lý lưu thông tin tài khoản ở đây
+            // Ví dụ: Lưu vào cơ sở dữ liệu hoặc localStorage
 
-        $(document).on("dblclick", "li", function () {
-          $(this).remove();
-        });
-      });
+            alert('Đăng ký thành công');
+            document.getElementById('registerForm').reset();
+          });
     </script>
   </body>
 </html>
