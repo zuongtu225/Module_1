@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        color: white;
+        background-color: black;
+        text-align: center;
+      }
+      button {
+        right: 40%;
+        top: 55%;
+        position: absolute;
+        background-color: #02dd18;
+        padding: 15px 30px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+      }
+      .imgActor {
+        width: 50%;
+        display: flex;
+        padding: 10px 100px;
+      }
+
+      #img1 {
+        width: 400px;
+      }
+
+      #img2 {
+        width: 100px;
+        height: 100px;
+      }
+      #human-kg {
+        position: absolute;
+        top: 40%;
+        left: 4%;
+      }
+      #fruit-kg {
+        position: absolute;
+        top: 20%;
+        left: 43%;
+      }
+      #fruit-title {
+        position: absolute;
+        top: 35%;
+        left: 43%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ĐỐI TƯỢNG TRONG LẬP TRÌNH</h1>
+    <br />
+    <br />
+    <button onclick="ex2()">EAT</button>
+    <div class="imgActor">
+      <img id="img1" src="./human.png" alt="" />
+      <img id="img2" src="./fruit.png" alt="" />
+    </div>
+    <div class="kg">
+      <h1 id="human-kg"></h1>
+      <h1 id="fruit-kg"></h1>
+      <h1 id="fruit-title"></h1>
+    </div>
+    <script>
+      class Human {
+        constructor(name, weight, gender) {
+          this.name = name;
+          this.weight = weight;
+          this.gender = gender;
+        }
+        eat(fruit) {
+          if (fruit.kg > 1) {
+            return (this.weight += 10); //tăng kg người
+          } else {
+          }
+        }
+        speake() {}
+        listen() {}
+        sleep() {}
+      }
+
+      class Fruit {
+        constructor(name, kg) {
+          this.name = name;
+          this.kg = kg;
+        }
+
+        getSize() {}
+        decrease() {
+          if (this.kg == 150) {
+            const img2 = document.getElementById("img2");
+            img2.src = "./apple-done.png";
+          }
+          if (this.kg < 1) {
+            const appleMSG = document.getElementById("fruit-title");
+            appleMSG.innerHTML = "Táo chỉ còn là hạt ko thể ăn nữa";
+            const printApple = document.getElementById("fruit-kg");
+            printApple.style.display = "none";
+            const img2 = document.getElementById("img2");
+            img2.src =
+              "https://vinmec-prod.s3.amazonaws.com/images/20220114_115241_010985_thuc-pham-gay-ngo-d.max-1800x1800.jpg";
+          }
+          if (this.kg > 1) {
+            return (this.kg -= 10); //giảm kg táo}
+          }
+        }
+      }
+      const adam = new Human("Adam", 30, "nam");
+      const apple = new Fruit("Apple", 250);
+      // ______________
+      function ex2() {
+        adam.eat(apple); //khi nhấn Ăn thì hàm Eat() sẽ hoạt động
+        apple.decrease(); //khi nhấn Ăn thì hàm Decrease() sẽ hoạt động
+        const printHuman = document.getElementById("human-kg");
+        printHuman.innerHTML = "Weight: " + adam.weight;
+        const printApple = document.getElementById("fruit-kg");
+        printApple.innerHTML = "Weight: " + apple.kg;
+      }
+    </script>
+  </body>
+</html>

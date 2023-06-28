@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ex1()">Bai-1</button>
+    <button onclick="ex2()">Bai-2</button>
+    <script>
+      function ex1() {
+        let products = [
+          { id: 1, name: "Milk", count: 100 },
+          { id: 2, name: "Yakult", count: 100 },
+          { id: 3, name: "Butter", count: 100 },
+        ];
+
+        products.splice(2, 1, { id: 3, name: "Butter", count: 1 });
+        //________
+        const text = products.find((item) => item.name == "Butter");
+        console.log(text);
+      }
+      function ex2() {
+        class Dog {
+          constructor(name, speed) {
+            this.name = name;
+            this.speed = speed;
+          }
+          dogSpeak() {
+            alert("Chấp hết");
+          }
+        }
+
+        class Cat {
+          constructor(name, speed) {
+            this.name = name;
+            this.speed = speed;
+          }
+        }
+
+        const dog = new Dog("Husk Ngáo", 200);
+        const cat = new Cat("Hoàng Tượng", 500);
+        if(dog.speed > )
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      button {
+        cursor: pointer;
+        border: 100px solid black;
+        padding: 10px 120px;
+        background-color: #ffbfbf;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ex1()">Bai1 - TÌM SINH VIÊN CÓ ĐIỂM CAO NHẤT</button>
+    <script>
+      const students = [];
+      function ex1() {
+        const student = {
+          id: 1,
+          name: "Daniel Roschil",
+          gender: "male",
+          age: 20,
+          mark: 9,
+        };
+        const newStudent = {
+          id: "",
+          name: "",
+          gender: "",
+          age: "",
+          mark: "",
+        };
+
+        const id = prompt("Nhập id");
+        const name = prompt("Nhập name");
+        const gender = prompt("Nhập gender");
+        const age = prompt("Nhập age");
+        const mark = prompt("Nhập mark");
+        newStudent.id = id;
+        newStudent.name = name;
+        newStudent.gender = gender;
+        newStudent.age = age;
+        newStudent.mark = mark;
+        students.push(student, newStudent);
+        console.log(students);
+        // _______
+        let markMax = 0;
+        let largest;
+        students.forEach((item, index) => {
+          if (item.mark > markMax) {
+            markMax = item.mark;
+            largest = item;
+          }
+        });
+        console.log("student lớn nhất là", largest.name.toUpperCase());
+      }
+    </script>
+  </body>
+</html>
