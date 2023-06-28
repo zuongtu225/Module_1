@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đồng hồ điện tử</title>
+    <style>
+      #clock {
+        font-size: 48px;
+        text-align: center;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        var time = hours + ":" + minutes + ":" + seconds;
+
+        document.getElementById("clock").textContent = time;
+      }
+
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
