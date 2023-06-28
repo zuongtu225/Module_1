@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <body>
+ 
+    <button onclick="ex3()">Bai-3 Vinfast VF8 </button>
+
+    <script>
+   
+      function ex3(){
+        class Car{   //Car đại diện nhiều xe ô tô khác , car là class khung mẫu thôi
+          constructor(name,color, price, origin, designs ,battery, speed, weight, length){
+            this.name = name;
+            this.color = color;
+            this.price = price.toLocaleString(); //chuyển number có dáu
+            this.origin = origin;
+            this.designs = designs;           
+            this.speed = speed;
+            this.weight = weight;
+            this.length = length;
+          
+          }
+          racing = ()=>{
+            return "CHẠY SỐ 1"  //CHẠY SỐ 1 
+          }      
+          stop  = () =>  "Ko dùng return"; 
+          setColor(value){   //Cho phép nhập lại Màu Sắc
+            this.color = value
+          }
+
+        }
+        
+        const vinVF8 = new Car("Vin","White", 2000000000 , "Việt Nam", 'SUV','200 km/h',1250,4.750 + "mm");
+        console.log('Lần 1',vinVF8);
+       const setColor = prompt('Nhập lại color') ;
+         vinVF8.setColor(setColor)   //set lại color 
+        console.log(vinVF8.racing())  //this là vinVF8
+        console.log('Lần 2',vinVF8);
+        
+      }
+    </script>
+  </body>
+</html>

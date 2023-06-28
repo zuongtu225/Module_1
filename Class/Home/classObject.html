@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script>
+      //   let print = document.getElementById("canvas");
+      //   let canva = print.lineTo(102.2);
+      class Rectangle {
+        constructor(width, height) {
+          this.width = width;
+          this.height = height;
+        }
+        acreage() {
+          return this.width * this.height; //kiểu dữ liệu là number
+        }
+        perimeter() {
+          return (this.width + this.height) * 2;
+        }
+        //set chiều rộng
+        setWidth = (value) => {
+          this.width = value;
+        };
+        //set chiều cao
+        setHeight = (value) => {
+          //arrow ko có this nên dùng arrows
+          this.height = value;
+        };
+        printer = () => {
+          console.log("Diện tích hình chữ nhật là:", this.acreage()); //phải gọi () nó mới chạy
+          console.log("Chu Vi hình chữ nhật là:", this.perimeter());
+        };
+      }
+      const width = +prompt("Nhap width");
+      const height = +prompt("Nhap height");
+      const newObject = new Rectangle(width, height);
+      newObject.printer();
+      //set lại width height
+      const setHeight = +prompt("Nhập lại chiều cao");
+      const setWidth = +prompt("Nhập lại chiều rộng");
+      newObject.setHeight(setHeight);
+      newObject.setWidth(setWidth);
+      newObject.printer();
+    </script>
+  </body>
+</html>

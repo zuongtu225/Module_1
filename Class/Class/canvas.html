@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+
+    <script>
+      // Lấy đối tượng Canvas
+      var canvas = document.getElementById("myCanvas");
+
+      // Lấy ngữ cảnh vẽ 2D
+      var ctx = canvas.getContext("2d");
+
+      // Vẽ hình tròn
+      ctx.beginPath();
+      ctx.arc(250, 150, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+    </script>
+  </body>
+</html>

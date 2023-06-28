@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      khi bạn gán một đối tượng cho một biến khác, nó sẽ tạo một tham chiếu đến
+      đối tượng đó
+    </h1>
+    <script>
+      //___KIỂU DỮ LIỆU THAM CHIẾU
+      const st5 = { code: "SV007", name: "DNAIEL", age: 10, city: "NEW YORK" };
+      const st6 = st5; //st6 không tạo ra một bản sao mới của st5
+      // nó chỉ tạo một liên kết đến cùng một đối tượng trong bộ nhớ.
+      // Điều này có nghĩa là st5 và st6 đều trỏ đến cùng một vị trí bộ nhớ
+      //thay đổi một trong hai biến sẽ ảnh hưởng đến cả hai biến.
+      st6.age = 30;
+      st6.city = "Sicily";
+      console.log("object mới", st6);
+      console.log("object cũ vẫn bị thay đổi ", st5);
+      //Khi bạn gán một đối tượng cho một biến khác, nó sẽ tạo một tham chiếu đến đối tượng đó
+      //Điều này có nghĩa là cả hai biến sẽ trỏ đến cùng một đối tượng trong bộ nhớ
+    </script>
+  </body>
+</html>

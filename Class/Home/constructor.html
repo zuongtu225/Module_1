@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="cTo()">Bai 1</button>
+    <script>
+      function cTo() {
+        function Temperature(c) {
+          this.c = c;
+
+          this.feriant = () => {
+            this.f = (this.c * 9) / 5 + 32;
+            return this.f;
+          };
+          // ________
+          this.kenvin = () => {
+            this.k = this.c + 273.15;
+            return this.k;
+          };
+          this.printer = () => {
+            console.log("ĐỘ C SANG ĐỘ F ", this.feriant());
+            console.log("ĐỘ C SANG ĐỘ K ", this.kenvin());
+          };
+        }
+        const cel = +prompt("Nhập độ C");
+        const tempe = new Temperature(cel);
+        tempe.printer();
+      }
+    </script>
+  </body>
+</html>

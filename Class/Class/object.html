@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ______Đối Tượng trong lập trình____________________________
+      const object = {
+        name: "Putin", //THUỘC TÍNH là 1 dòng
+        age: 50,
+        gender: "male",
+      };
+      //   _____________________________________________________________end
+      //   __________Spread...copy và tạo array, object mới___________________
+      const person = {
+        id: 1,
+        name: "Daniel",
+        age: 20,
+      };
+      //không thay đổi array cũ
+      const person2 = { ...person };
+      person2.name = "Trump";
+      person2.id = 6;
+      console.log("spread object mới", person2);
+      console.log("object cũ", person);
+      //___________________________________________________________end
+      const animals = [
+        {
+          id: 1,
+          name: "Kyty",
+          age: 20,
+          type: "cat",
+        },
+        {
+          id: 1,
+          name: "lyly",
+          age: 8,
+          type: "dog",
+        },
+      ];
+      const cat = animals[0];
+      cat.name = "Hoàng Thượng";
+      const newAnimals = [...animals];
+      console.log(newAnimals);
+      const cat2 = newAnimals[1];
+      cat2.type = "cat cute";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ____REGISTER___ -->
+    <form onsubmit="handleSubmit(event)">
+      <h1>Đăng Ký Paypal</h1>
+      <input type="text" id="email" />
+      <p id="emailMSG"></p>
+      <br />
+      <input type="password" id="password" />
+      <p id="passwordMSG"></p>
+      <br />
+      <input type="password" id="confirm-password" />
+      <p id="confirmMSG"></p>
+      <br />
+      <input type="submit" value="Đăng Ký" />
+    </form>
+
+    <!-- ______LOGIN________ -->
+    <form onsubmit="handleLogin(event)">
+      <h1>Đăng Nhập Paypal</h1>
+      <input type="text" id="email-login" />
+      <p id="emailMSG-login"></p>
+      <br />
+      <input type="password" id="password-login" />
+      <p id="passwordMSG-login"></p>
+      <br />
+      <input type="submit" value="Đăng Nhập" />
+    </form>
+    <script src="signup-login.js"></script>
+  </body>
+</html>

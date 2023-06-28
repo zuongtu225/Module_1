@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //___Cách 1 ___object liberal________
+      const product1 = {
+        name: "Gậy bóng chày",
+        width: 1000,
+        price: 100,
+        uniPrice: "USD",
+        getAuthor: function () {
+          return "Zuilyas";
+        },
+      };
+      console.log("product-1", product1);
+      // _________________________________end
+      // ___Cách 2: Khai báo bằng CONSTRUCTOR Function______phải VIẾT HOA chữ đầu_____
+      function Product2(name, price) {
+        //___khai báo thuộc tính__________đặc điểm
+
+        this.nameNew = name; //____ tương tự Product2.nameNew = name;
+        this.priceNew = price; //this.priceNew là KHỎI TẠO 1 THUỘC TÍNH mới nhận value từ tham số "price"
+        //_
+        //___khai báo hành vi_____ko truyền từ ngoài vào___
+        this.getBuy = function () {
+          return "Buy succed!";
+        };
+      }
+      const pro2 = new Product2("Gậy bóng chày titan", 200); //truyền theo "vị trí thuộc tính" trong đối tượng
+      console.log("Product2", pro2);
+
+      // __Cách 3____
+      const product3 = new Object(); //new Object() là KEY WORD default tạo ra một đối tượng mới bằng cách sử dụng hàm
+      product3.name = "Vito Colenore";
+      product3.age = 40;
+      console.log("Product3", product3);
+      //________________________________________________________________end
+      // __CÁCH 4:__CLASS__________________________________________________________________________________________
+      class Product4 {
+        // Tạo 1 lớp đối tượng
+        //thuộc tính
+        constructor(name, price) {
+          this.name = name;
+          this.price = price;
+        }
+        //phương thức
+        buy() {
+          //ko nhận or nhận
+          return "Bạn đã mua thành công";
+        }
+        run(speed) {
+          return `${this.name} is running at ${speed} km/h.`;
+        }
+      }
+      //tạo 1 đối tượng mới bắt buộc có "new"
+      const newObject = new Product4("MC Laren car", 111000);
+
+      newObject.run(4000);
+      console.log(newObject);
+      console.log("Product4 =>", newObject.run());
+      //________________________________________________________________end______________________________________
+      //________________________________________________________________
+      // TẠO ĐỐI TƯỢNG ____________
+      const student_1 = new Student_Class("SV001", "Luis John", 20, "London");
+      student_1.svCode = "SV002";
+      console.log(student_1.svCode);
+    </script>
+  </body>
+</html>
