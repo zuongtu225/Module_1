@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ứng dụng Quản lý công việc</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <h1>Ứng dụng Quản lý công việc</h1>
+
+    <input id="taskInput" type="text" placeholder="Thêm công việc" />
+    <button id="addButton">Thêm</button>
+
+    <ul id="taskList"></ul>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#addButton").click(function () {
+          var task = $("#taskInput").val();
+
+          if (task !== "") {
+            var listItem = $("<li>").text(task);
+            $("#taskList").append(listItem);
+            $("#taskInput").val("");
+          }
+        });
+
+        $(document).on("click", "li", function () {
+          $(this).toggleClass("completed");
+        });
+
+        $(document).on("dblclick", "li", function () {
+          $(this).remove();
+        });
+      });
+    </script>
+  </body>
+</html>
