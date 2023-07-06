@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+table {
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+}
+table tr {
+  border-bottom: 1px solid rgb(0, 191, 255);
+}
+
+td,
+th {
+  padding: 10px 20px;
+}
+.btn-edit {
+  font-weight: bold;
+  background-color: rgb(255, 174, 0);
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+}
+.btn-delete {
+  background-color: rgb(255, 0, 38);
+  color: white;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.btn-finished {
+  background-color: rgb(0, 226, 0);
+  color: white;
+  padding: 5px 10px;
+
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+}
+.btn {
+  margin: 3px;
+}
+.wraper {
+  border-radius: 6px;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+.add-task {
+  margin: 20px;
+}
+
+.add-task input {
+  width: 320px;
+  height: 30px;
+  border: 1px solid rgb(0, 195, 255);
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 10px;
+}
+.add-task button {
+  background-color: rgb(0, 226, 0);
+  color: white;
+  padding: 5px 10px;
+
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+  border: none;
+}
